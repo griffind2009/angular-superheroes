@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app = 'superheroApp'>
 <head>
   <meta charset="UTF-8">
   <title>Superhero Phone Book</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
-<body>
-
+<body ng-controller = 'superheroesCtrl as vm'>
   <script src="app.js"></script>
+  <h2>Superheroes</h2>
+  <div ng-repeat = "superhero in vm.superheroes">
+    <p>{{superhero.name}}</p>
+  </div>
+  <img ng-src="{{superhero.img}}">
 </body>
 </html>
