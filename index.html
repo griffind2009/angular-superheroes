@@ -10,8 +10,8 @@
   <script src="app.js"></script>
   <h2>Superheroes</h2>
   <div ng-repeat = "superhero in vm.superheroes">
-    <p>{{superhero.name}}</p>
+    <p>{{superhero.name}}, {{superhero.number}}, {{superhero.affiliation}}</p>
+    <img ng-src="{{superhero.img}}">
   </div>
-  <img ng-src="{{superhero.img}}">
 </body>
 </html>
