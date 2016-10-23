@@ -8,11 +8,6 @@
 </head>
 <body ng-controller = 'superheroesCtrl as vm'>
   <script src="app.js"></script>
-  <h2>Superheroes</h2>
-  <div ng-repeat = "superhero in vm.superheroes">
-    <p>{{superhero.name}}, {{superhero.number}}, {{superhero.affiliation}}</p>
-    <img ng-src="{{superhero.img}}">
-  </div>
   <div ng-init="superheroes =
     {name: "Spiderman", number: "555-WEBS", affiliation: "Marvel", img: "https://images-na.ssl-images-amazon.com/images/M/MV5BNTA1ZGVmYzAtNjY1Yi00OTY3LWIxODItMTBhMjU3OTM2OGRmXkEyXkFqcGdeQXVyNjYzNjI1Njc@._V1_UX182_CR0,0,182,268_AL_.jpg"},
     {name: "Batman", number: "555-DARK", affiliation: "DC", img: "https://s-media-cache-ak0.pinimg.com/236x/43/4b/c1/434bc1fa72cb6da2674baf9cd31de35b.jpg"},
@@ -30,5 +25,15 @@
     <td>{{superhero.affiliation}}</td>
   </tr>
 </table>
+<div>
+  <input type="text" ng-model = "vm.newSuperhero.title">
+  <button ng-click="vm.addSuperhero()"> Add Superhero</button>
+</div>
+  <h2>Superheroes</h2>
+  <div ng-repeat = "superhero in vm.superheroes">
+    <p>{{superhero.name}}, {{superhero.number}}, {{superhero.affiliation}}</p>
+    <img ng-src="{{superhero.img}}">
+  </div>
+
 </body>
 </html>
